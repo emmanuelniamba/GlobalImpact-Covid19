@@ -12,7 +12,7 @@ dash.register_page(__name__, path = '/employment_labour', name = "Employment & L
 
 ####################### DATA #############################
 
-data = pd.read_csv("/Users/prachikansal/Desktop/centrale med/mock project/GlobalImpact-Covid19/data/unemployment.csv", sep=',')
+data = pd.read_csv("data/unemployment.csv", sep=',')
 # link to the dataset: https://rshiny.ilo.org/dataexplorer0/?lang=en&segment=indicator&id=UNE_2EAP_SEX_AGE_RT_A
 
 col_names_changed = {'ref_area.label':'Country', 'sex.label':'Gender', 'time':'Year', 'obs_value':'Unemployment_Rate'}

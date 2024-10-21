@@ -14,7 +14,7 @@ Bar chart: Trade volume changes for key countries.
 Line chart: Time-series showing export/import trends.
 Scatter plot: Trade volume vs. stock market performance.
 '''
-
+'''
 import pandas as pd
 import dash
 from dash import dcc, html, callback
@@ -25,7 +25,7 @@ import country_converter as cc
 dash.register_page(__name__, path='/trade', name="Trade and Supply Chains", order=5)
 
 ####################### DATA #############################
-data = pd.read_csv("/Users/prachikansal/Desktop/centrale med/mock project/GlobalImpact-Covid19/data/Import.csv", sep=',', skiprows=4, header=None)
+data = pd.read_csv(r"data/Import.csv", sep=',', skiprows=4, header=None)
 # link to the dataset: 
 
 column_names = data.iloc[0]
@@ -109,3 +109,4 @@ layout = html.Div(children=[
     html.Br(),
     dcc.Graph(id="imports", figure=update_graph_continent(Import_by_continent_year))
 ])
+'''
