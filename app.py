@@ -18,7 +18,7 @@ server = app.server
 df = pd.read_csv(r"C:\Users\hp\OneDrive\Desktop\covidddd\GlobalImpact-Covid19\data\pmi_unemployment_data.csv")
 
 # Navbar components
-img_tag = html.Img(src="assets/cc.png", width=27, className="m-1")
+img_tag = html.Img(src="assets/jj.png", width=27, className="m-1")
 brand_link = dcc.Link([img_tag, html.Span("Impact of COVID-19 on Global Economy ", className="glow-text")], href="#", className="navbar-brand")
 pages_links = [
     dcc.Link(page['name'], href=page["relative_path"], className="dropdown-item")
