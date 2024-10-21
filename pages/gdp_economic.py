@@ -122,7 +122,7 @@ The dataset contains GDP data for 268 countries, from the year 1960-2023. We onl
 2022-2023 is grouped as the Post-Covid era.
 '''
 
-# ####################### WIDGETS #############################
+####################### WIDGETS #############################
 
 # # Dropdown for selecting country
 # country_dropdown = dcc.Dropdown( 
@@ -132,7 +132,7 @@ The dataset contains GDP data for 268 countries, from the year 1960-2023. We onl
 #     clearable = False
 # )
 
-# ####################### CHART #############################
+####################### CHART #############################
 
 def create_gdp_line_chart(data):
   fig = px.line(data, 
@@ -145,7 +145,7 @@ def create_gdp_line_chart(data):
   return fig
 
 
-# ####################### PAGE LAYOUT #############################
+####################### PAGE LAYOUT #############################
 
 layout = html.Div(children=[
     html.Br(),
