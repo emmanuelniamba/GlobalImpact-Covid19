@@ -18,7 +18,7 @@ external_js = [
 app = Dash(__name__, pages_folder='pages', use_pages=True, external_stylesheets=external_css, external_scripts=external_js)
 server = app.server
 
-df = pd.read_csv("/Users/prachikansal/Desktop/centrale med/mock project/data/pmi_unemployment_data.csv")
+df = pd.read_csv("/Users/prachikansal/Desktop/centrale med/mock project/GlobalImpact-Covid19/data/pmi_unemployment_data.csv")
 
 
 img_tag = html.Img(src="assets/cc.png", width=27, className="m-1")
