@@ -92,7 +92,7 @@ dash.register_page(__name__, path='/gdp_economic', name="GDP and Economic Growth
 ####################### DATA #############################
 
 # data = pd.read_csv("/Users/prachikansal/Desktop/centrale med/mock project/GlobalImpact-Covid19/data/API_NY.GDP.MKTP.KD.ZG_DS2_en_csv_v2_31631.csv", sep=',', skiprows=4, header=None)
-data = pd.read_csv("/Users/prachikansal/Desktop/centrale med/mock project/GlobalImpact-Covid19/data/gdp_data.csv", sep=',')
+data = pd.read_csv(r"C:\Users\hp\OneDrive\Desktop\covidddd\GlobalImpact-Covid19\data\gdp_data.csv", sep=',')
 # link to the dataset: https://databank.worldbank.org/reports.aspx?source=2&series=NY.GDP.MKTP.CD&country=#
 
 data = data.drop(data.index[-1:-6:-1]) # As the last 5 rows are blank and just contain null values, drop them
