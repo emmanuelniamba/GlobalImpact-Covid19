@@ -251,14 +251,13 @@ layout = html.Div(children=[
    
     html.Div([
        html.H2("Impact of Covid-19 on Stock Market and the Financial Sector", className="fw-bold text-center"),
-    ], className='box', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}),
+       
+       html.Div([
+          html.P(["Overall, these metrics are interconnected and significantly impact the global economy. The COVID-19 pandemic has reshaped market dynamics, investor behavior, and economic policies, leading to shifts in how these metrics are perceived and evaluated. As the world moves towards recovery, understanding these metrics will be crucial for navigating the post-pandemic economic landscape."], className='box_comment'),
+       ],className='box', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}),
 
-    html.Div([
-       html.P("Overall, these metrics are interconnected and significantly impact the global economy. The COVID-19 pandemic has reshaped market dynamics, investor behavior, and economic policies, leading to shifts in how these metrics are perceived and evaluated. As the world moves towards recovery, understanding these metrics will be crucial for navigating the post-pandemic economic landscape."),
     ], className='box', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}),
-
-    
-     
+         
     html.Div([
         html.Label("CHOOSE A METRIC TO KNOW MORE"), 
         html.Br(),
@@ -271,8 +270,11 @@ layout = html.Div(children=[
         html.Div([html.Label("Select Country"), ctry_dropdown_stocks_traded, html.Br(), dcc.Graph(id="stocks_traded_graph")],
                  className='box', style={'width': '33%'}),
 
-        html.Div([html.P(id='comment')], 
-                 className='box_comment',style={'width': '33%'}),
+       html.Div([
+          html.P(id="comment",
+              className='box_comment', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}
+              ),
+       ],className='box', style={'width': '33%'}),
         
         html.Div([html.Label("Select Country"), ctry_dropdown_currency, html.Br(), dcc.Graph(id="currency_graph")],
                  className='box', style={'width': '33%'}),
@@ -361,7 +363,7 @@ def update_graph_st(main_category, stocks_traded_column,currency_column):
         Long-Term Outlook: Investors began focusing on long-term economic recovery and shifts in consumer behavior, influencing index performance post-pandemic.    '''
 
         return [
-            currency_rates_chart(currency_column),
+            stock_indices_chart(),
             comment
             ]
 
