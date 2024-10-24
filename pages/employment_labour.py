@@ -33,10 +33,11 @@ def filter_data(category):
     df = df[["Country","Year","Unemployment_Rate"]]
     return df
 
+
 # ####################### WIDGETS #############################
 
 # Dropdown for selecting category
-cat_dropdown = dcc.Dropdown(id="cat_column", options = list(categories.keys()), value = "Total",clearable=False)
+cat_dropdown = dcc.Dropdown(id="cat_column", options = list(categories.keys()), value = "Total", clearable=False)
 
 # ####################### CHART #############################
 

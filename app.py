@@ -15,7 +15,7 @@ app = Dash(__name__, pages_folder='pages', use_pages=True, external_stylesheets=
 server = app.server
 
 # Sample dataset (replace with your actual data path)
-df = pd.read_csv(r"C:\Users\hp\OneDrive\Desktop\covidddd\GlobalImpact-Covid19\data\pmi_unemployment_data.csv")
+df = pd.read_csv("data/pmi_unemployment_data.csv")
 
 # Navbar components
 img_tag = html.Img(src="assets/jj.png", width=27, className="m-1")

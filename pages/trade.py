@@ -25,7 +25,7 @@ import country_converter as cc
 dash.register_page(__name__, path='/trade', name="Trade and Supply Chains", order=5)
 
 ####################### DATA #############################
-data = pd.read_csv(r"data/Import.csv", sep=',', skiprows=4, header=None)
+data = pd.read_csv("/Users/prachikansal/Desktop/centrale med/mock project/GlobalImpact-Covid19/data/Import.csv", sep=',', skiprows=4, header=None)
 # link to the dataset: 
 
 column_names = data.iloc[0]
