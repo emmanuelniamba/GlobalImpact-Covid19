@@ -117,16 +117,11 @@ def make_ctry_dropdown(s):
     if (s == "Stocks Traded"):
         df = stocks_traded_data()
         l = df["Country"].unique().tolist()
-        print(l[0])
-        print(type(l))
         return l
     
     elif (s == "Currency"):
        df = currency_rates_data()
        l = df["Country"].unique().tolist()
-       
-       print(l[0])
-       print(type(l))
        return l
    
 
@@ -160,6 +155,9 @@ radio_main_category= dbc.RadioItems(
 
 ctry_dropdown_stocks_traded = dcc.Dropdown(id="stocks_traded_column", options = make_ctry_dropdown("Stocks Traded"), value = "France", clearable=False)
 ctry_dropdown_currency = dcc.Dropdown(id="currency_column", options = make_ctry_dropdown("Currency"), value = "France", clearable=False)
+
+
+
 
 ################################### GRAPHS AND CHARTS #########################################
 
@@ -251,11 +249,8 @@ layout = html.Div(children=[
    
     html.Div([
        html.H2("Impact of Covid-19 on Stock Market and the Financial Sector", className="fw-bold text-center"),
-       
-       html.Div([
-          html.P(["Overall, these metrics are interconnected and significantly impact the global economy. The COVID-19 pandemic has reshaped market dynamics, investor behavior, and economic policies, leading to shifts in how these metrics are perceived and evaluated. As the world moves towards recovery, understanding these metrics will be crucial for navigating the post-pandemic economic landscape."], className='box_comment'),
-       ],className='box', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}),
-
+       html.Br(),
+       html.P(["Overall, these metrics are interconnected and significantly impact the global economy. The COVID-19 pandemic has reshaped market dynamics, investor behavior, and economic policies, leading to shifts in how these metrics are perceived and evaluated. As the world moves towards recovery, understanding these metrics will be crucial for navigating the post-pandemic economic landscape."], className='box_comment'),
     ], className='box', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}),
          
     html.Div([

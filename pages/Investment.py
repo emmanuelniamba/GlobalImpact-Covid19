@@ -4,12 +4,15 @@ from dash import dcc, html, callback
 import plotly.express as px
 from dash.dependencies import Input, Output
 import country_converter as cc
-
+import logging
 
 dash.register_page(__name__, path = '/Investment_data.csv', name = "Investment on the world", order = 13)
 
 
 ####################### DATA #############################
+
+logger = logging.getLogger('country_converter')
+logger.setLevel(logging.ERROR)
 
 dataR = pd.read_csv("data/Investment_data.csv", sep=',', skiprows=4, header=None)
 

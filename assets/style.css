@@ -61,7 +61,7 @@ body {
   
 .box {
     border-radius: 20px;
-    background-color: #F9F9F8;
+    background-color: #E7ECF0;
     margin: 10px;
     padding: 25px;
     box-shadow: 2px 2px 2px lightgrey;
@@ -69,10 +69,10 @@ body {
   
 .box_comment {
     border-radius: 20px;
-    background-color: #d4f5c29a;
+    background-color: #B3D8EE;
     margin: 10px;
     padding: 10px;
-    box-shadow: 2px 2px 2px lightgrey;
+    box-shadow: 3px 3px 3px lightgrey;
     font-size: small;
     text-align: center;
     font-family: system-ui;
@@ -112,22 +112,22 @@ body {
   
 .radio label {
     display: table-caption;
-    background-color: #F9F9F8;
+    background-color: #cde4f2;
     padding: 15px 15px;
     font-size: 16px;
-    border: 2px solid #e9a8538e;
+    border: 2px solid #8db0c5;
     border-radius: 10px;
     width: 200%;
     text-align: center;
 }
   
 .radio input[type="radio"]:checked + label {
-    background-color: #e98b1044;              
-    border: 2px solid #F9F9F8;
+    background-color: #a8c9dc;              
+    border: 3px solid #708e9e;
 }
   
 .radio label:hover {
-    background-color: #e1e2df;
+    background-color: #cddbdf;
     border: 2px solid #e1e2df;
 }
 

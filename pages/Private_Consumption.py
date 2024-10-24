@@ -4,6 +4,7 @@ from dash import dcc, html, callback
 import plotly.express as px
 from dash.dependencies import Input, Output
 import country_converter as cc
+import logging
 
 
 dash.register_page(__name__, path = '/Consumption_data.csv', name = "Private_Consumption on the world", order = 14)
@@ -11,6 +12,9 @@ dash.register_page(__name__, path = '/Consumption_data.csv', name = "Private_Con
 dataT = pd.read_csv("data/international-tourist-trips.csv", sep=',')
 
 ####################### DATA #############################
+
+logger = logging.getLogger('country_converter')
+logger.setLevel(logging.ERROR)
 
 dataR = pd.read_csv("data/Consumption_data.csv", sep=',', skiprows=4, header=None)
 

@@ -3,7 +3,7 @@ from dash import dcc, html, Input, Output
 import pandas as pd
 import plotly.express as px
 
-dash.register_page(__name__, path='/', name="Name of Tab=Global", order=0)
+dash.register_page(__name__, path='/', name="Homepage", order=0)
 
 # Load the GDP dataset
 # Make sure to change the path to where your dataset is located

@@ -28,7 +28,7 @@ pages_links = [
 # Layout of the Dash app
 app.layout = html.Div(style={
     "height": "100vh",
-    "background": "rgba(0, 0, 0, 0.5) url('/assets/background.jpg') no-repeat center center fixed",
+    "background": "rgba(205, 225, 237, 0.1) url('/assets/background.jpg') no-repeat center center fixed",
     "background-size": "cover",
     "position": "relative"
 }, children=[

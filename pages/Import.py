@@ -5,12 +5,14 @@ from dash import dcc, html, callback
 import plotly.express as px
 from dash.dependencies import Input, Output
 import country_converter as cc
-
+import logging
 
 dash.register_page(__name__, path = '/Import.csv', name = "Import on the world", order = 11)
 
 
 ####################### DATA #############################
+logger = logging.getLogger('country_converter')
+logger.setLevel(logging.ERROR)
 
 dataR = pd.read_csv("data/Import.csv", sep=',', skiprows=4, header=None)
 # link to the dataset: https://rshiny.ilo.org/dataexplorer0/?lang=en&segment=indicator&id=UNE_2EAP_SEX_AGE_RT_A

@@ -7,9 +7,13 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import country_converter as cc
 import plotly.graph_objects as go
+import logging
 
 # Register the page for the dashboard
 dash.register_page(__name__, path='/Export2.csv', name="Export2 on the world", order=21)
+
+logger = logging.getLogger('country_converter')
+logger.setLevel(logging.ERROR)
 
 # Load Export data
 dataR = pd.read_csv("data/Export.csv", sep=',', skiprows=4, header=None)
