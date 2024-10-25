@@ -184,50 +184,56 @@ dropdown_commodities = dcc.Dropdown(id="commodity_name_col", options = make_drop
 layout = html.Div(children=[
    
     html.Div([
-       html.H2("Impact of Covid-19 on Inflation and Prices", className="fw-bold text-center"),
-       html.Br(),
-       html.P(["Overall, these metrics are interconnected and significantly impact the global economy. The COVID-19 pandemic has reshaped market dynamics, investor behavior, and economic policies, leading to shifts in how these metrics are perceived and evaluated. As the world moves towards recovery, understanding these metrics will be crucial for navigating the post-pandemic economic landscape."]),
+        html.Br(),
+        html.H1("Impact of Covid-19 on Inflation and Prices", className="fw-bold text-center"),
+        html.Br(),
+        html.P(["Overall, these metrics are interconnected and significantly impact the global economy. The COVID-19 pandemic has reshaped market dynamics, investor behavior, and economic policies, leading to shifts in how these metrics are perceived and evaluated. As the world moves towards recovery, understanding these metrics will be crucial for navigating the post-pandemic economic landscape."]),
+        html.Br(),
     ], className='box', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}),
          
 
+    # -------- FIRST ROW FLEXBOX -----------------
     html.Div([
         
-        # Text box - Row 1 Left
-
+        # TEXT BOX - ROW 1 - LEFT
         html.Div([
 
             html.Div([
                 html.Br(),
                 html.Div([
-                    html.P("Before the pandemic, consumer prices globally remained relatively stable, with annual inflation hovering around 2-3% in most developed economies.", className='box_comment fs-5'),
-                ], className="col-md-4"),
+                    html.P("Before the pandemic, consumer prices globally remained relatively stable, with annual inflation hovering around 2-3% in most developed economies. Regions like the EU and U.S. had consistent inflation rates below 2%.", className='box_comment fs-5'),
+                ], className="col-md-6"),
 
                 html.Div([
+                    html.Br(),
                     html.P("Global Inflation (2019)", className="fw-bold text-primary fs-4 text-center"),
-                    html.P("2.5%", className="fw-bold text-info display-4 text-center"),  # Large key figure
-                ], className="col-md-4"),
-
-                html.Div([
-                    html.P("Regions like the EU and U.S. had consistent inflation rates below 2%.", className='box_comment fs-5'),
-                ], className="col-md-4"),
+                    html.P("2.5%", className="fw-bold text-info display-5 text-center"),  
+                ], className="col-md-6"),
 
             ], className='row mb-5'),
 
             
             html.Div([
                 html.Br(),
-
                 html.Div([
-                    html.P("U.S. Inflation Peak in 2022", className="fw-bold text-primary fs-4 text-center"),
-                    html.P("9.1%", className="fw-bold text-danger display-4 text-center"),  
+                    html.Br(),
+                    html.Br(),
+                    html.P("U.S. Inflation Peak (2022)", className="fw-bold text-primary fs-4 text-center"),
+                    html.P("9.1%", className="fw-bold text-info display-4 text-center"),  
                 ], className="col-md-4"),
 
                 html.Div([
+                    html.Div([
+                        html.Br(),
+                        html.P("As the pandemic unfolded, countries faced disruptions in production, labor, and supply chains."),
+                        html.P("Consumer prices began to rise sharply across the globe, particularly for essentials like food, healthcare, and energy."),
+                    ], className="box_comment fs-5 text-center"),
                     # html.H4("Pandemic-Induced Price Surge", className="fw-bold text-primary"),
-                    html.P("As the pandemic unfolded, countries faced disruptions in production, labor, and supply chains. Consumer prices began to rise sharply across the globe, particularly for essentials like food, healthcare, and energy.", className='box_comment fs-5'),
                 ], className="col-md-4"),
 
                 html.Div([
+                    html.Br(),
+                    html.Br(),
                     html.P("U.K. Inflation", className="fw-bold text-primary fs-4 text-center"),
                     html.P("10.1%", className="fw-bold text-info display-4 text-center"), 
                 ], className="col-md-4"),
@@ -238,38 +244,45 @@ layout = html.Div(children=[
             html.Div([
                 html.Div([
                     html.Div([
+                        html.Br(),
                         html.H4("Food Prices", className="fw-bold text-center"),
-                        html.P("Global food prices saw a sharp increase, especially in countries relying on imports.")
-                    ], className="box_comment fs-6 text-center"),
-                    html.P("Food price rise in Africa: '30%'", className="fw-bold text-info fs-4 text-center"),
+                        html.P("Global food prices saw a sharp increase, especially in countries relying on imports."),
+                        html.P("Food price rise in Africa: '30%'"),
+                    ], className="box_comment fs-5 text-center"),
                 ], className="col-md-4"),
 
                 html.Div([
                     html.Div([
+                        html.Br(),
                         html.H4("Energy Prices", className="fw-bold text-center"),
-                        html.P("Energy prices skyrocketed, with oil prices rebounding sharply after an initial drop.")
-                    ], className="box_comment fs-6 text-center"),
-                    html.P("Gas prices up '45%' in Europe", className="fw-bold text-danger fs-4 text-center"),
+                        html.P("Energy prices skyrocketed, with oil prices rebounding sharply after an initial drop."),
+                        html.P("Gas prices up '45%' in Europe"),
+                    ], className="box_comment fs-5 text-center"),
                 ], className="col-md-4"),
 
                 html.Div([
                     html.Div([
+                        html.Br(),
                         html.H4("Healthcare Costs", className="fw-bold text-center"),
-                        html.P("Healthcare costs surged as demand for medical supplies increased during the pandemic.")
-                    ], className="box_comment fs-6 text-center"),
-                    html.P("Healthcare inflation in the U.S.: **5.6%**", className="fw-bold text-warning fs-4 text-center"),
+                        html.P("Healthcare costs surged as demand for medical supplies increased during the pandemic."),
+                        html.P("Healthcare inflation in the U.S.: 5.6%"),
+                    ], className="box_comment fs-5 text-center"),
                 ], className="col-md-4"),
             ], className="row mb-5"),
 
 
             html.Div([
-                html.P("By 2023, global consumer prices began to stabilize as supply chains recovered. However, in many regions, inflation persisted due to lingering energy crises, geopolitical tensions, and wage increases. Countries like Argentina continued to experience high inflation rates (above 80%), while developed economies started seeing a slow moderation in inflation.", 
-                    className='box_comment fs-5 text-center'),
-                ], className="col-md-12 p-4 mb-5"),
-            
-            ], className='box', style={'width': '50%'}),
+                html.Div([
+                    html.Br(),
+                    html.P("By 2023, global consumer prices began to stabilize as supply chains recovered. However, in many regions, inflation persisted due to lingering energy crises, geopolitical tensions, and wage increases."),
+                    html.P("Countries like Argentina continued to experience high inflation rates (above 80%), while developed economies started seeing a slow moderation in inflation."),
+                    html.Br(),
+                ], className="box_comment fs-5 text-center"),  
+            ])          
+        ], className='box', style={'width': '50%'}),
 
-        # Graph box - Row 1 Right
+
+        # GRAPH BOX - ROW 1 - RIGHT
         html.Div([
             html.H3("Consumer Prices"),
             html.P("Tracks change in prices (relative to the base year) to understand inflationary trends and the purchasing power of consumers"),
@@ -293,7 +306,7 @@ layout = html.Div(children=[
 
                 html.Div([
                     html.P("Argentina inflation in 2023", className="fw-bold text-primary fs-4 text-center"),
-                    html.P("82.4%", className="fw-bold text-danger display-4 text-center"),  
+                    html.P("82.4%", className="fw-bold text-info display-4 text-center"),  
                 ], className="col-md-4"),
 
                 html.Div([
@@ -309,8 +322,13 @@ layout = html.Div(children=[
     ], style={'display': 'flex', 'width': '100%'}),
 
 
-    # Flexbox for the two graphs in the second row
+
+    # -------- SECOND FIRST ROW FLEXBOX -----------------
+
+     
     html.Div([
+        
+        # GRAPH BOX - ROW 2 - LEFT
         html.Div([
             html.H3("Commodity Prices"),
             html.P("Shows the fluctuating values of major commodities over the years"),
@@ -318,152 +336,124 @@ layout = html.Div(children=[
             html.Label("Select Commodity"), 
             dropdown_commodities, 
             html.Br(), 
-            dcc.Graph(id="commodity_graph")
-            ],className='box', style={'width': '50%'}),
+            dcc.Graph(id="commodity_graph"),
 
-    #     html.Div([
-    #         html.P("At the onset of the pandemic, there was a sharp drop in consumer demand as lockdowns and social distancing measures were imposed. This led to a deflationary environment in some sectors (e.g., travel, hospitality). Oil prices dropped significantly, reducing inflationary pressure in energy-dependent sectors.", 
-    #                className='box_comment', 
-    #                style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}
-    #                ),
-    #         html.P("As the pandemic progressed, global supply chains were severely disrupted due to factory closures, transportation bottlenecks, and labor shortages. This led to scarcity of goods, pushing prices upward. Governments worldwide implemented large fiscal stimulus packages to prevent economic collapse. Central banks cut interest rates and engaged in quantitative easing, increasing money supply, which started driving inflation upwards.",
-    #                className='box_comment', 
-    #                style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}
-    #                ),
-    #         html.P("As economies reopened, there was a surge in demand for goods and services, especially as consumers released pent-up savings. However, supply chains had not fully recovered, leading to a significant mismatch between supply and demand. Energy prices, particularly oil and gas, soared due to supply constraints, further contributing to inflation. Central banks initially viewed the inflation as 'transitory', expecting it to ease once supply chains normalized. However, it persisted longer than expected.",
-    #                className='box_comment', 
-    #                style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}
-    #                ),
-    #         html.P("Many countries, especially in the U.S., Europe, and some emerging markets, experienced inflation reaching multi-decade highs. Key drivers included labor shortages, rising energy prices, and continued supply chain disruptions. Central banks began tightening monetary policies by raising interest rates to curb inflation. For example, the Federal Reserve and European Central Bank increased rates, which eventually started slowing inflation.",
-    #                className='box_comment', 
-    #                style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}
-    #                ),
-    #         html.P("By late 2023 and into 2024, inflation rates began to moderate in many countries as supply chains improved, energy prices stabilized, and the effects of higher interest rates curtailed demand. However, inflation levels in some regions remained elevated due to structural issues like wage increases or geopolitical tensions (e.g., energy supply disruptions from conflicts).", 
-    #                className='box_comment', 
-    #                style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}
-    #                ),
-    #         html.P(id="comment_commodity", className='box_comment', style={'margin': '10px', 'padding-top': '15px', 'padding-bottom': '15px'}),
-    #    ],className='box', style={'width': '50%'}),
-    html.Div([
-        html.H3("COVID-19's Economic Impact: Inflation and Supply Chain", className="fw-bold text-center mb-4"),
-
-        # First Section: Key Figures and Stats (in 1 column)
-        html.Div([
-            html.Div([
-                html.P("Global Inflation Rate Surge:", className="fw-bold text-primary fs-4 text-center"),
-                html.P("12%", className="fw-bold text-danger display-4 text-center"),  # Large key figure
-            ], className="col"),
+            html.Br(),
+            html.Br(),
+            html.Br(),
 
             html.Div([
-                html.P("Fiscal Stimulus by Countries (2020-2022):", className="fw-bold text-primary fs-4 text-center"),
-                html.P("$16 Trillion", className="fw-bold text-success display-4 text-center"),  # Large key figure
-            ], className="col"),
+                html.Br(),
+                html.Div([
+                    html.P("Increase in Wages", className="fw-bold text-primary fs-4 text-center"),
+                    html.P("10%", className="fw-bold text-info display-4 text-center"), 
+                ], className="col-md-4"),
 
-            html.Div([
-                html.P("Oil Price Drop in 2020:", className="fw-bold text-primary fs-4 text-center"),
-                html.P("↓ 65%", className="fw-bold text-info display-4 text-center"),  # Large key figure
-            ], className="col"),
-        ], className='row mb-5'),
+                html.Div([
+                    html.P("Hike in Interest Rates", className="fw-bold text-primary fs-4 text-center"),
+                    html.P("3x", className="fw-bold text-info display-4 text-center"), 
+                ], className="col-md-4"),
 
-        html.Hr(),  # Section separator
+                html.Div([
+                    html.P("Increase in Gas prices", className="fw-bold text-primary fs-4 text-center"),
+                    html.P("45%", className="fw-bold text-info display-4 text-center"),  
+                ], className="col-md-4"),
+            
+            ], className='row'),
 
-        # Second Section: Two Columns with Text
-        html.Div([
-
-            # Column 1 (Left)
-            html.Div([
-                html.H4("Initial Impact on Prices", className="fw-bold text-primary"),
-                html.P("At the onset of the pandemic, sectors like travel and hospitality saw a deflationary trend. Oil prices dropped significantly, reducing inflation in energy-dependent sectors.",
-                    className='box_comment fs-5'),  # Smaller text
-                html.P("↓ Oil prices dropped by **65%** in 2020", className='fw-bold text-danger fs-6'),  # Bold and colored
-                html.P("This provided temporary relief to the inflationary pressure.",
-                    className='box_comment fs-5'),  # Slightly smaller text for details
-            ], className="col-md-6"),
-
-            # Column 2 (Right)
-            html.Div([
-                html.H4("Global Supply Chain Disruptions", className="fw-bold text-primary"),
-                html.P("Disruptions due to factory closures and labor shortages led to **scarcity** of goods, pushing prices up. Transportation bottlenecks further aggravated the situation.",
-                    className='box_comment fs-5'),
-                html.P("Governments responded with fiscal stimulus of **$16 trillion** to avoid economic collapse.", 
-                    className='fw-bold text-success fs-5'),
-                html.P("Meanwhile, central banks engaged in **quantitative easing**.", 
-                    className='box_comment fs-6 text-warning'),  # Highlighting with color
-            ], className="col-md-6")
-        ], className='row mb-5'),
-
-        html.Hr(),  # Section separator
-
-        # Third Section: Three Columns with Key Highlights
-        html.Div([
-            html.Div([
-                html.H4("Labor Shortages", className="fw-bold text-center"),
-                html.P("Severe labor shortages due to pandemic-induced lockdowns contributed to supply chain issues.",
-                    className="box_comment fs-6 text-center"),
-                html.P("Wages rose by **10%**", className="fw-bold text-info fs-4 text-center"),
-            ], className="col-md-4"),
-
-            html.Div([
-                html.H4("Energy Prices", className="fw-bold text-center"),
-                html.P("Energy prices soared, particularly oil and gas, contributing heavily to inflation.",
-                    className="box_comment fs-6 text-center"),
-                html.P("Gas prices up **45%**", className="fw-bold text-danger fs-4 text-center"),
-            ], className="col-md-4"),
-
-            html.Div([
-                html.H4("Monetary Policies", className="fw-bold text-center"),
-                html.P("Central banks began tightening policies. Interest rates increased by the Federal Reserve, slowing inflation growth.",
-                    className="box_comment fs-6 text-center"),
-                html.P("Interest rate hikes **3x**", className="fw-bold text-warning fs-4 text-center"),
-            ], className="col-md-4"),
-        ], className="row mb-5"),
-
-        html.Hr(),  # Section separator
-
-        # Fourth Section: Full-width text block with important narrative
-        html.Div([
-            html.H4("Moderation of Inflation (2023-2024)", className="fw-bold text-primary text-center"),
-            html.P("By late 2023 and into 2024, inflation rates began to moderate in many countries as supply chains improved and energy prices stabilized. However, some regions experienced elevated inflation due to structural issues like wage increases or geopolitical tensions (e.g., conflicts affecting energy supply).", 
-                className='box_comment fs-5 text-center'),
-        ], className="col-md-12 p-4 mb-5"),
-
-        # Final Section: Three-column layout with smaller detailed insights
-        html.Div([
-            html.Div([
-                html.P("Energy prices stabilized.", className="box_comment fs-6 text-center"),
-            ], className="col-md-4"),
-
-            html.Div([
-                html.P("Supply chains started recovering.", className="box_comment fs-6 text-center"),
-            ], className="col-md-4"),
-
-            html.Div([
-                html.P("Monetary policy adjustments helped curb inflation.", className="box_comment fs-6 text-center"),
-            ], className="col-md-4"),
-        ], className="row")
-    ], className='container-fluid'),
-
-
-    ], style={'display': 'flex', 'width': '100%'}),
+        ],className='box', style={'width': '50%'}),
     
 
-    # # Full-width graphs below
-    # html.Div([
-    #    html.Div([html.Label("Overall Currency Graph")]),
-    #    html.Br(),
-    #    dcc.Graph(id="currency_graph_overall", figure=currency_rates_chart_overall()),
-    # ], className='box', style={'width': '100%'}),
+        # TEXT BOX - ROW 2 - RIGHT
+        html.Div([
 
-    # html.Div([
-    #    html.Div([html.Label("Stock Indices Graph")]),
-    #    html.Br(),
-    #    dcc.Graph(id="stock_indices_graph", figure=stock_indices_chart()),
-    # ], className='box', style={'width': '100%'}),
+            # ROW 1
+            html.Div([
+                html.Br(),
+                html.Div([
+                    html.Br(),
+                    html.P("Global Inflation Rate Surge", className="fw-bold text-primary fs-4 text-center"),
+                    html.P("12%", className="fw-bold text-info display-5 text-center"),  
+                ], className="col-md-4"),
+                
+                html.Div([
+                    html.Br(),
+                    html.P("Fiscal Stimulus by Countries (2020-2022)", className="fw-bold text-primary fs-4 text-center"),
+                    html.P("$16 Trillion", className="fw-bold text-info display-5 text-center"),  
+                ], className="col-md-4"),
+
+                html.Div([
+                    html.Br(),
+                    html.P("Oil Price Drop (2020)", className="fw-bold text-primary fs-4 text-center"),
+                    html.P("↓ 65%", className="fw-bold text-info display-5 text-center"),  
+                ], className="col-md-4"),
+            ], className='row mb-5'),
+
+            # ROW 2
+            html.Div([
+                html.Div([
+                    html.Div([
+                        html.Br(),
+                        html.P("At the onset of the pandemic, sectors like travel and hospitality saw a deflationary trend. Oil prices dropped significantly, reducing inflation in energy-dependent sectors."),
+                        html.P("This provided temporary relief to the inflationary pressure."),
+                    ], className="box_comment fs-5 text-center"),
+                ], className="col-md-6"),
+
+                html.Div([
+                    html.Div([
+                        html.Br(),
+                        html.P("Disruptions due to factory closures and labor shortages led to scarcity of goods, pushing prices up. Transportation bottlenecks further aggravated the situation."),
+                        html.P("Meanwhile, central banks engaged in quantitative easing."), 
+                    ], className="box_comment fs-5 text-center"),
+                ], className="col-md-6"),
+
+            ], className="row mb-5"),
+
+
+            # ROW 3
+            html.Div([
+                html.Div([
+                    html.Div([
+                        html.Br(),
+                        html.H4("LABOUR SHORTAGES", className="fw-bold text-center"),
+                        html.P("Severe labor shortages due to pandemic-induced lockdowns contributed to supply chain issues."),
+                    ], className="box_comment fs-5 text-center"),
+                ], className="col-md-4"),
+
+                html.Div([
+                    html.Div([
+                        html.Br(),
+                        html.H4("ENERGY PRICES", className="fw-bold text-center"),
+                        html.P("Energy prices soared, particularly oil and gas, contributing heavily to inflation."),
+                    ], className="box_comment fs-5 text-center"),
+                ], className="col-md-4"),
+
+                html.Div([
+                    html.Div([
+                        html.Br(),
+                        html.H4("MONETARY POLICIES", className="fw-bold text-center"),
+                        html.P("Central banks began tightening policies. Interest rates increased by the Federal Reserve, slowing inflation growth."),
+                    ], className="box_comment fs-5 text-center"),
+                ], className="col-md-4"),
+            ], className="row mb-5"),
+                        
+                        
+            html.Div([
+                html.Div([
+                    html.Br(),
+                    html.P("By late 2023 and into 2024, inflation rates began to moderate in many countries as supply chains improved and energy prices stabilized. However, some regions experienced elevated inflation due to structural issues like wage increases or geopolitical tensions (e.g., conflicts affecting energy supply)."),
+                    html.P("✓ Energy prices stabilized."),
+                    html.P("✓ Supply chains started recovering."),
+                    html.P("✓ Monetary policy adjustments helped curb inflation."), 
+                    html.Br(),
+                ], className="box_comment fs-5 text-center"),  
+            ])          
+        ], className='box', style={'width': '50%'}),
+    
+    ],style={'display': 'flex', 'width': '100%'}),
+
 ])
-
-
-
-
+    
 
 ################################### CALLBACKS #########################################
 
@@ -475,7 +465,7 @@ def update_graph_consumer(ctry_cpi_name_col):
     return consumer_price_chart(ctry_cpi_name_col)
 
 
-@callback(Output("ommodity_graph", "figure"),
+@callback(Output("commodity_graph", "figure"),
         Input('commodity_name_col', 'value'))
 
 def update_graph_commodity(commodity_name_col):
