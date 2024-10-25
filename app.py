@@ -71,7 +71,7 @@ app.layout = html.Div(style={
     #### Main Page
     html.Div([
         html.Br(),
-        html.P('Overview', className="text-white text-center fw-bold fs-1 glow-text"),
+        html.P('', className="text-white text-center fw-bold fs-1 glow-text"),
         dash.page_container
     ], className="col-11 mx-auto")
 
