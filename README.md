@@ -31,7 +31,7 @@ This project presents a comprehensive multi-page dashboard analyzing the impact 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/covid19-economic-impact-dashboard.git
-   cd covid19-economic-impact-dashboard
+   cd GlobalImpact-Covid19
    ```
 
 2. **Install required packages**:
