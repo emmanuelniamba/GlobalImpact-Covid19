@@ -1,31 +1,14 @@
-# '''
-# 4. Inflation and Prices
-# Page Name: "Inflation & Prices"
-
-# Purpose: Explore inflation rates during COVID-19, especially the effects of supply chain disruptions.
-# Content:
-# Comparison of inflation rates across countries.
-# Impact of COVID-19 on essential commodities and services.
-# Discussion of supply chain challenges and price fluctuations.
-# Visualizations:
-# Line chart: Inflation rate trends over time.
-# Heatmap: Correlation between inflation and other variables (unemployment, trade).
-# Bubble chart: Inflation vs. GDP growth vs. population.
-# '''
-
-
 import pandas as pd
 import dash
 from dash import dcc, html, callback
 import plotly.express as px
 from dash.dependencies import Input, Output, State
-import dash_daq as daq
 import dash_bootstrap_components as dbc
 import numpy as np
 import plotly.graph_objs as go
 
 
-dash.register_page(__name__, path='/inflation', name="Inflation and Prices", order=3)
+dash.register_page(__name__, path='/inflation', name="Inflation and Prices", order=4)
 
 
 

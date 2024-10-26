@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output
 import country_converter as cc
 
 
-dash.register_page(__name__, path = '/employment_labour', name = "Employment & Labour Marker", order = 4)
+dash.register_page(__name__, path = '/employment_labour', name = "Employment & Labour Marker", order = 40)
 
 
 ####################### DATA #############################

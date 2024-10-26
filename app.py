@@ -11,7 +11,7 @@ external_js = [
 ]
 
 # Establishing the main server for our application/dashboard
-app = Dash(__name__, pages_folder='pages', use_pages=True, external_stylesheets=external_css, external_scripts=external_js)
+app = Dash(__name__, pages_folder='pages', use_pages=True, external_stylesheets=external_css, external_scripts=external_js, suppress_callback_exceptions=True)
 server = app.server
 
 # Navbar components

@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output
 import country_converter as cc
 import logging
 
-dash.register_page(__name__, path = '/GDP.csv', name = "gdp on the world", order = 10)
+dash.register_page(__name__, path = '/GDP.csv', name = "GDP and Economic Growth", order = 1)
 
 
 ####################### DATA #############################

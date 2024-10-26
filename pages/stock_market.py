@@ -25,7 +25,7 @@ import dash_bootstrap_components as dbc
 import numpy as np
 import plotly.graph_objs as go
 
-dash.register_page(__name__, path='/stock_market', name="Stocks and Finances", order=5)
+dash.register_page(__name__, path='/stock_market', name="Stocks and Finances", order=2)
 
 
 
