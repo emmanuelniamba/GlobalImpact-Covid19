@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output
 import country_converter as coco
 
 
-dash.register_page(__name__, path='/consumer', name="Consumer Confidence Analysis", order=70)
+dash.register_page(__name__, path='/ConsumerConfidence', name="Consumer Confidence Analysis", order=70)
 
 
 
